@@ -30,7 +30,7 @@ struct pt{
     ld ma = (a - b).min_angle(*this - b);
     return side(a, b) * (CW ? -1 : 1) <= 0 ? ma : 2*pi - ma; }
   bool in_angle(pt a, pt b, pt c, bool CW=1){ // Is pt inside infinite angle ABC 
-    return angle(a, b, CW) <= c.angle(a, b, CW); } // From AB to AC in CW direction
+    return angle(a, b, CW) <= c.angle(a, b, CW); } // From BA to BC in CW direction
   // -------------- ROTATIONS -------------- //
 	pt rot(pt p){ return pt(*this % p,*this * p); }// use ccw90(1,0), cw90(-1,0)
 	pt rot(ld ang){ return rot(pt(sin(ang), cos(ang))); } // CCW, ang (radians)
