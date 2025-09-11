@@ -1,6 +1,6 @@
 const int eps = 0, mod = 1e9+7;
 
-int gauss(vector<vi> &a, vi &ans) {
+int gauss(vector<vi> &a, vi &ans) { // a matrix n, m + 1 donde la ultima columna es b
   int n = sz(a), m = sz(a[0]) - 1;
   vi where(m, -1);
   for(int col=0, row=0; col<m && row<n; ++col) {
