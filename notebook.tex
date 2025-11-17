@@ -2,6 +2,7 @@
 \usepackage[a4paper,margin=1.5cm]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
+\usepackage{lastpage}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{tocloft}
@@ -27,11 +28,13 @@
 \newcommand{\Topic}[1]{\textbf{#1}}
 
 \lstdefinestyle{shared}{
-    belowcaptionskip=1\baselineskip,
+    belowcaptionskip=0pt,
     breaklines=true,
-    xleftmargin=\parindent,
+    xleftmargin=0pt,
     showstringspaces=false,
-    basicstyle=\fontsize{10}{6}\ttfamily,
+    basicstyle=\fontsize{10}{5}\ttfamily,
+    aboveskip=0pt,
+    belowskip=0pt,
 }
 \lstdefinestyle{cpp}{
 	style=shared,
@@ -62,34 +65,37 @@
 }
 \lstset{escapechar=@}
 
-
-\title{\vspace{-4ex}\Large{Fast and Fourier ICPC Team Notebook}}
-\author{}
-\date{}
+\title{\vspace{-6ex}\Large{MIST\_Untitled}}
+\author{\vspace{-4ex}}
+\date{\vspace{-8ex}Last modified: \today}
 
 \begin{document}
-\begin{landscape}
+
+% Configure header
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[L]{MIST\_Untitled - Military Institute of Science and Technology}
+\fancyhead[R]{\thepage\ out of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyfoot{} % No footer
+
 \setlength{\columnseprule}{0.4pt}
 \setlength{\columnsep}{40pt}
 \begin{multicols}{2}
 \maketitle
-\vspace{-13ex}
+\vspace{-12ex}
 \tableofcontents
-\pagestyle{fancy}
 
 \input contents.tex
 
 \end{multicols}
 \pagebreak
-\setlength{\columnseprule}{0pt}
-\begin{multicols}{2}
-\input Theory.tex
-\end{multicols}
+% \setlength{\columnseprule}{0pt}
+% \begin{multicols}{2}
+% \input Theory.tex
+% \end{multicols}
 
 \pagebreak
 
-
-
-\end{landscape}
 \end{document}
 

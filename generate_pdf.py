@@ -39,8 +39,10 @@ def get_style(filename):
 
 # TODO: check if this is everything we need
 def texify(s):
-    #s = s.replace('\'', '\\\'')
-    #s = s.replace('\"', '\\\"')
+    s = s.replace('_', '\\_')  # Escape underscores
+    s = s.replace('&', '\\&')  # Escape ampersands
+    s = s.replace('%', '\\%')  # Escape percent signs
+    s = s.replace('#', '\\#')  # Escape hash signs
     return s
 
 def get_tex(sections):

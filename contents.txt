@@ -1,132 +1,65 @@
-# Any line followed by a '#' character is ignored
-# Section headings must be in square brackets
-# Subsections within a section should follow the format:
-#   [filename within code directory][tab character \t][subsection title]
+# Auto-generated from code directory
+# Section headings in square brackets
+# Format: [filename]<TAB>[title]
 
 [C++]
-c++/template.cpp	C++ template
-c++/alternativa.cpp	Opcion
-c++/bits.cpp	Bits Manipulation
-c++/random.cpp	Random
-c++/custom_hash.cpp	Custom Hash
-c++/other.cpp	Other
+c++/1. template.cpp	template
+c++/2. random.cpp	random
+c++/3. gp_hash.cpp	gp_hash
+c++/4. pbds.cpp	pbds
+c++/5. debug.cpp	debug
+c++/6. stress.cpp	stress
+c++/7. vscode.cpp	vscode
 
-[Strings]
-strings/z_algorithm.cpp	Z's Algorithm
-strings/KMP.cpp	KMP
-strings/hashing.cpp	Hashing
-strings/Manacher.cpp	Manacher Algorithm
-strings/minimum_expression.cpp	Minimum Expression
-strings/trie.cpp	Trie
-strings/suffix_array.cpp	Suffix Array
-strings/aho_corasick.cpp	Aho-Corasick
-strings/suffix_automaton.cpp	Suffix Automaton
-strings/palindromic_tree.cpp	Palindromic Tree
-strings/suffix_tree.cpp	Suffix Tree
-
-[Graph algorithms]
-graph/articulationpointandbridge.cpp	Articulation Points and Bridges
-graph/blockcuttree.cpp	Biconnected Components
-graph/Topo_sort.cpp	Topological Sort
-graph/kosaraju.cpp	Kosaraju: Strongly connected components
-graph/tarjanSCC.cpp	Tarjan: Strongly connected components
-graph/mst_kruskal.cpp	MST Kruskal
-graph/mst_prim.cpp	MST Prim
-graph/dijkstra.cpp	Dijkstra
-graph/Bellmanford.cpp	Bellman-Ford
-graph/spfa.cpp	Shortest Path Faster Algorithm
-graph/floyd_warshall.cpp	Floyd-Warshall
-graph/LCA_binarylifting.cpp	LCA Binary Lifting
-graph/2sat.cpp	2 SAT
-graph/2satkosarajuytarjan.cpp	2 SAT Kosaraju y Tarjan
-graph/centroid_decomposition.cpp	Centroid Decomposition
-graph/tree_binarization.cpp	Tree Binarization
-graph/eulerian_path.cpp	Eulerian Path
-
-[Flows]
-flows/edmons_karp.cpp	Edmons-Karp
-flows/dinic.cpp	Dinic
-flows/pushrelabel.cpp	Push-Relabel
-flows/konig.cpp	Konig
-flows/maxbipmatching.cpp	MCBM Augmenting Algorithm
-flows/hungarian.cpp	Hungarian Algorithm
-flows/min_cost_max_flow.cpp	Min-Cost Max-Flow Algorithm
-flows/min_cost_max_flow_marcos.cpp	Min-Cost Max-Flow Algorithm 2
-flows/blossom.cpp	Blossom
-
-[Data Structures]
-data-structures/unionfind.cpp	Disjoint Set Union
-data-structures/sqrt_decomposition.cpp	SQRT Decomposition
-data-structures/fenwick_tree.cpp	Fenwick Tree
-data-structures/fenwick_tree2d.cpp	Fenwick Tree 2D
-data-structures/seg_treerecursivo.cpp	Segment Tree
-data-structures/seg_tree_lazy_prop.cpp	ST Lazy Propagation
-data-structures/seg_tree_persistent.cpp	Persistent ST 
-data-structures/seg_tree_2d_iterativo.cpp	Segtree 2D
-data-structures/seg_tree_iterativo.cpp	Segtree iterativo
-data-structures/RMQ.cpp	RMQ
-data-structures/sack.cpp	Sack
-data-structures/hld.cpp	Heavy Light Decomposition
-data-structures/treap.cpp	Treap
-data-structures/implicit_treap.cpp	Implicit Treap
-data-structures/implicit_treap_father.cpp	Implicit Treap Father
-data-structures/ordered_set.cpp	Ordered Set
-data-structures/mos_algo.cpp	Mo's Algorithm
-data-structures/dynamic_connectivity.cpp	Dynamic Connectivity
-data-structures/link_cut_tree.cpp	Link Cut Tree
-
-[Math]
-math/sieve_eratosthenes.cpp	Sieve of Eratosthenes
-math/count_primes.cpp	Count primes
-math/segmented_sieve.cpp	Segmented Sieve
-math/mult_polinomios.cpp	Polynomial Multiplication
-math/fft.cpp	Fast Fourier Transform
-math/fht.cpp	FHT
-math/fibolog.cpp	Fibonacci Matrix
-math/matrix_expo.cpp	Matrix Exponentiation
-math/binpow.cpp	Binary Exponentiation
-math/euler_totient_function.cpp	Euler's Totient Function
-math/extended_euclidean.cpp	Extended Euclidean (Diophantic)
-math/inversamod.cpp	Inversa modular
-math/legendre_formula.cpp	Legendre's Formula
-math/mobious.cpp	Mobious
-math/miller_rabin.cpp	Miller Rabin Test
-math/pollard_rho.cpp	Pollard Rho
-math/CRT.cpp	Chinese Remainder Theorem
-math/simplex.cpp	Simplex
-math/gaussjordan.cpp	Gauss Jordan
-math/gaussjordan_modular.cpp	Gauss Jordan Modular
-math/berlekamp_massey.cpp	Berlekamp Massey
-math/lagrange_interpolation.cpp	Lagrange Interpolation
-math/discrete_log.cpp	Discrete Log
-math/frac.cpp	Fractions
-math/mint.cpp	Modular Int
+[Dsa]
+dsa/1. KMP.cpp	KMP
+dsa/2. Hashing.cpp	Hashing
+dsa/3. BigInteger.cpp	BigInteger
+dsa/4. Kadane.cpp	Kadane
+dsa/5. Segement_tree.cpp	Segement_tree
+dsa/6. Fenwick_tree.cpp	Fenwick_tree
+dsa/7. Segment_tree_lazy.cpp	Segment_tree_lazy
+dsa/8.Trie.cpp	Trie
+dsa/9. DSU.cpp	DSU
+dsa/10. HLD.cpp	HLD
+dsa/11. Manacher.cpp	Manacher
 
 [Dynamic Programming]
-dynamic-programming/edit_distance.cpp	Edit Distance
-dynamic-programming/lcs.cpp	Longest common subsequence
-dynamic-programming/lis.cpp	Longest increasing subsequence
-dynamic-programming/merging_intervals.cpp	Trick to merge intervals
-dynamic-programming/sos_dp.cpp	Trick Sets DP
-dynamic-programming/dpdivideandconquer.cpp	Divide and Conquer
-dynamic-programming/knuth_optimization.cpp	Knuth's Optimization
-dynamic-programming/chulltrick.cpp	Convex Hull Trick
-dynamic-programming/chulltrickdynamic.cpp	CH Trick Dynamic
+dynamic-programming/1. LCS.cpp	LCS
+dynamic-programming/2. MCM.cpp	MCM
+dynamic-programming/3. LIS_length.cpp	LIS_length
 
-[Geometry]
-geometry/point.cpp	Point
-geometry/line.cpp	Line
-geometry/convex_hull.cpp	Convex Hull
-geometry/polygon.cpp	Polygon
-geometry/circle.cpp	Circle
-geometry/radial_order.cpp	Radial Order
-geometry/halfplane.cpp	Halfplane
-geometry/KDTree.cpp	KD Tree
-geometry/minkowski_sum.cpp	Minkowski Sum
+[Graph]
+graph/1. Dijkstra.cpp	Dijkstra
+graph/2. BellmanFord.cpp	BellmanFord
+graph/3. FloydWarshall.cpp	FloydWarshall
+graph/4. Toposort.cpp	Toposort
+graph/5. Kruskal.cpp	Kruskal
+graph/6. Prims.cpp	Prims
+graph/7. LCA.cpp	LCA
+graph/8. Rerooting.cpp	Rerooting
 
-[Miscellaneous]
-miscellaneous/counting_sort.cpp	Counting Sort
-miscellaneous/expression_parsing.cpp	Expression Parsing
-miscellaneous/ternary_search.cpp	Ternary Search
+[Number Theory]
+number_theory/1. Leap_year.cpp	Leap_year
+number_theory/2. Print_calender.cpp	Print_calender
+number_theory/3. Binary_exponentiation.cpp	Binary_exponentiation
+number_theory/4. Count_divisor.cpp	Count_divisor
+number_theory/5. Check_prime.cpp	Check_prime
+number_theory/6. SPF.cpp	SPF
+number_theory/7. Seive.cpp	Seive
+number_theory/8. Optimize_seive.cpp	Optimize_seive
+number_theory/9. nth_prime_number.cpp	nth_prime_number
+number_theory/10. nCr.cpp	nCr
+number_theory/11. Factorial_mod.cpp	Factorial_mod
+number_theory/12. PHI.cpp	PHI
+number_theory/13. Catalan.cpp	Catalan
+number_theory/14. Extended_GCD.cpp	Extended_GCD
+number_theory/15. Large Mod.cpp	Large Mod
+number_theory/16. Factorial_Divisor.cpp	Factorial_Divisor
+number_theory/17. Number_conversion.cpp	Number_conversion
+number_theory/18. Number_of_1_in_bit_till_N.cpp	Number_of_1_in_bit_till_N
+number_theory/19. Disarrangement.cpp	Disarrangement
+number_theory/20. Millar_Rabin.cpp	Millar_Rabin
+number_theory/21. Modular_operation.cpp	Modular_operation
 
 [Fin]
