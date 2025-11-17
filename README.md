@@ -1,21 +1,16 @@
 # Competitive-Programming-Notebook
-This is a repository for Fast and Fourier - EAFIT ICPC Team Notebook.
+This is a repository for MIST_Untitled team codebook. Consist of me, [Istiaque Ahmed Arik](https://github.com/istiaqueahmedarik) and Shihab Ahmed.
 
-The folder `code` contains most of the algorithms used by our team in the coding competitions: graph, strings, geometry, data structures, network flows, math, dynamic programming and other competitive programming stuff.
+The folder `code` contains algorithms used in coding competitions: graph algorithms, data structures, number theory, dynamic programming and other competitive programming utilities.
 
-**NOTE:** Look `code/c++/template.cpp` to understand macros used in the code.
+**NOTE:** Look `code/c++/1. template.cpp` to understand macros used in the code.
 
 ## 📚 Quick Start
 
 ### Build the Complete Notebook
 
-**Automated (Recommended):**
 ```bash
-# Windows PowerShell
-.\build.ps1
-
-# Or manually
-python generate_contents_smart.py
+python auto_contents.py
 python generate_pdf.py
 ```
 
@@ -27,32 +22,15 @@ This will:
 - [Python 3.x](https://www.python.org/)
 - [latexmk](https://www.ctan.org/pkg/latexmk/) (part of TeX Live, MiKTeX, etc.)
 
-## 🔧 Manual Workflow
+## 🔧 Workflow
 
-### 1. Generate contents.txt (Optional - can be done manually)
+### 1. Generate contents.txt
 
-**Option A: Smart Auto-generation (Recommended)**
 ```bash
-python generate_contents_smart.py
+python auto_contents.py
 ```
 - Automatically scans `code/` directory
-- Extracts algorithm names from file comments
-- Shows diff with existing contents.txt
-
-**Option B: Basic Auto-generation**
-```bash
-python generate_contents.py
-```
-- Uses predefined algorithm names
-- Simpler and faster
-
-**Option C: Manual editing**
-Edit `contents.txt` directly with this format:
-```
-[Section name]
-subfolder/file.cpp	Description of the file
-```
-(Note: Use TAB character between filename and description)
+- Generates the table of contents for the notebook
 
 ### 2. Generate PDF
 
@@ -62,14 +40,6 @@ python generate_pdf.py
 
 This reads `contents.txt` and generates `notebook.pdf`.
 
-## 📖 Contents Automation
-
-See [AUTOMATION_README.md](AUTOMATION_README.md) for detailed documentation on:
-- How the auto-generation works
-- Customizing algorithm names
-- Configuring section order
-- Advanced usage examples
-
 ## 🎯 Adding New Algorithms
 
 1. **Add your algorithm file** to the appropriate folder in `code/`:
@@ -77,19 +47,10 @@ See [AUTOMATION_README.md](AUTOMATION_README.md) for detailed documentation on:
    code/graph/my_algorithm.cpp
    ```
 
-2. **Optionally add a title comment** at the top of the file:
-   ```cpp
-   // My Amazing Algorithm
-   // Complexity: O(n log n)
-   
-   void myAlgorithm() {
-       // implementation
-   }
-   ```
-
-3. **Rebuild the notebook**:
+2. **Rebuild the notebook**:
    ```bash
-   .\build.ps1
+   python auto_contents.py
+   python generate_pdf.py
    ```
 
 That's it! Your algorithm is now in the PDF.
@@ -99,22 +60,18 @@ That's it! Your algorithm is now in the PDF.
 ```
 ├── code/                          # Algorithm implementations
 │   ├── c++/                       # C++ utilities and templates
-│   ├── strings/                   # String algorithms
+│   ├── dsa/                       # Data structures and algorithms
 │   ├── graph/                     # Graph algorithms
-│   ├── flows/                     # Network flow algorithms
-│   ├── data-structures/           # Advanced data structures
-│   ├── math/                      # Mathematical algorithms
+│   ├── number_theory/             # Number theory algorithms
 │   ├── dynamic-programming/       # DP techniques
-│   ├── geometry/                  # Computational geometry
 │   └── miscellaneous/             # Other utilities
 ├── contents.txt                   # Algorithm index (auto-generated)
-├── generate_contents_smart.py     # Smart auto-generator
-├── generate_contents.py           # Basic auto-generator
+├── contents.tex                   # LaTeX formatted contents
+├── auto_contents.py               # Contents auto-generator
 ├── generate_pdf.py                # PDF builder
-├── notebook.tex                   # LaTeX template
+├── notebook.tex                   # LaTeX main document
 ├── Theory.tex                     # Mathematical formulas reference
 └── notebook.pdf                   # Final output
-
 ```
 
 ## 🔍 Credits
