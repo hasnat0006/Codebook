@@ -1,0 +1,5 @@
+indent.log
+*.log
+*.tmp
+*.bak
+.vscode/
