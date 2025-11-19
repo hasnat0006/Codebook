@@ -28,6 +28,9 @@ dsa/11. Manacher.cpp	Manacher
 dynamic-programming/1. LCS.cpp	LCS
 dynamic-programming/2. MCM.cpp	MCM
 dynamic-programming/3. LIS_length.cpp	LIS_length
+dynamic-programming/4. LCIS.cpp	LCIS
+dynamic-programming/5. SOS DP.cpp	SOS DP
+dynamic-programming/6. BS optimization.cpp	BS optimization
 
 [Graph]
 graph/1. Dijkstra.cpp	Dijkstra
@@ -38,6 +41,17 @@ graph/5. Kruskal.cpp	Kruskal
 graph/6. Prims.cpp	Prims
 graph/7. LCA.cpp	LCA
 graph/8. Rerooting.cpp	Rerooting
+graph/9. Euler_ckt.cpp	Euler_ckt
+graph/10. Min Cost Max Flow.cpp	Min Cost Max Flow
+graph/11. SCC.cpp	SCC
+graph/12. 0-1 BFS.cpp	0-1 BFS
+graph/13. Hull.cpp	Hull
+graph/14. Dynamic Hull.cpp	Dynamic Hull
+
+[Misc]
+misc/1. Max Pos and Next Greater.cpp	Max Pos and Next Greater
+misc/2. Knight Move.cpp	Knight Move
+misc/3. MatrixExpo.cpp	MatrixExpo
 
 [Number Theory]
 number_theory/1. Leap_year.cpp	Leap_year
@@ -61,5 +75,7 @@ number_theory/18. Number_of_1_in_bit_till_N.cpp	Number_of_1_in_bit_till_N
 number_theory/19. Disarrangement.cpp	Disarrangement
 number_theory/20. Millar_Rabin.cpp	Millar_Rabin
 number_theory/21. Modular_operation.cpp	Modular_operation
+number_theory/22. MSLCM.cpp	MSLCM
+number_theory/23. Find numbers in between [L, R] which are divisible by all Array elements.cpp	Find numbers in between [L, R] which are divisible by all Array elements
 
 [Fin]
