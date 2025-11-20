@@ -77,23 +77,26 @@
 \fancyhead[L]{MIST\_Untitled - Military Institute of Science and Technology}
 \fancyhead[R]{\thepage\ out of \pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{20pt}
+\setlength{\headsep}{15pt}
 \fancyfoot{} % No footer
 
 \setlength{\columnseprule}{0.4pt}
 \setlength{\columnsep}{40pt}
 \begin{multicols}{2}
-\maketitle
-\vspace{-6ex}
-\tableofcontents
+	\maketitle
+	\vspace{-6ex}
+	\tableofcontents
 
-\input contents.tex
+	\input contents.tex
+	\input information.tex
 
 \end{multicols}
 \pagebreak
 \setlength{\columnseprule}{0pt}
 \begin{multicols}{2}
-\section{Mathematics}
-\input math.tex
+	\section{Mathematics}
+	\input math.tex
 \end{multicols}
 
 \pagebreak

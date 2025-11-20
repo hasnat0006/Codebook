@@ -38,6 +38,7 @@ graph/5. Kruskal.cpp	Kruskal
 graph/6. Prims.cpp	Prims
 graph/7. LCA.cpp	LCA
 graph/8. Rerooting.cpp	Rerooting
+graph/9. Centroid_Tree.cpp	Centroid_Tree
 
 [Number Theory]
 number_theory/1. Leap_year.cpp	Leap_year
