@@ -1,22 +1,29 @@
 // sum over subsets
-for (int i = 0; i < B; i++) {
-  for (int mask = 0; mask < (1 << B); mask++) {
-    if ((mask & (1 << i)) != 0) {
+for (int i = 0; i < B; i++)
+{
+  for (int mask = 0; mask < (1 << B); mask++)
+  {
+    if ((mask & (1 << i)) != 0)
+    {
       f[mask] += f[mask ^ (1 << i)];
     }
   }
 }
 
 // sum over supersets
-for (int i = 0; i < B; i++) {
-  for (int mask = (1 << B) - 1; mask >= 0; mask--) {
+for (int i = 0; i < B; i++)
+{
+  for (int mask = (1 << B) - 1; mask >= 0; mask--)
+  {
     if ((mask & (1 << i)) == 0)
       g[mask] += g[mask ^ (1 << i)];
   }
 }
 // submask
-for (int mask = 1; mask < (1 << 5); mask++) {
-  for (int submask = mask; submask > 0; submask = ((submask - 1) & mask)) {
+for (int mask = 1; mask < (1 << 5); mask++)
+{
+  for (int submask = mask; submask > 0; submask = ((submask - 1) & mask))
+  {
     int subset = mask ^ submask;
   }
 }
