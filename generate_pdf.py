@@ -39,10 +39,17 @@ def get_style(filename):
 
 # TODO: check if this is everything we need
 def texify(s):
+    s = s.replace('\\', '\\textbackslash{}')  # Escape backslashes
     s = s.replace('_', '\\_')  # Escape underscores
     s = s.replace('&', '\\&')  # Escape ampersands
     s = s.replace('%', '\\%')  # Escape percent signs
     s = s.replace('#', '\\#')  # Escape hash signs
+    s = s.replace('{', '\\{')  # Escape opening braces
+    s = s.replace('}', '\\}')  # Escape closing braces
+    s = s.replace('$', '\\$')  # Escape dollar signs
+    s = s.replace('^', '\\textasciicircum{}')  # Escape caret
+    s = s.replace('~', '\\textasciitilde{}')  # Escape tilde
+    # Note: parentheses () and square brackets [] don't need escaping in normal text
     return s
 
 def get_tex(sections):

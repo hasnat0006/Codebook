@@ -23,6 +23,16 @@ dsa/8.Trie.cpp	Trie
 dsa/9. DSU.cpp	DSU
 dsa/10. HLD.cpp	HLD
 dsa/11. Manacher.cpp	Manacher
+dsa/12. 2D prefix Sum.cpp	2D prefix Sum
+dsa/14. CRT.cpp	CRT
+dsa/15. Intersect two arithmetic progression.cpp	Intersect two arithmetic progression
+dsa/16. Find nth value in a recurrence relation in O(logn.cpp	Find nth value in a recurrence relation in O(logn
+dsa/17. All_solution_of_ax+by_equal_c.cpp	All_solution_of_ax+by_equal_c
+dsa/18. all soln of linear eq.cpp	all soln of linear eq
+dsa/19. Subset sum sqrt(n).cpp	Subset sum sqrt(n)
+dsa/20. small giant (a^x = b mod m, find x, given other).cpp	small giant (a^x = b mod m, find x, given other)
+dsa/21. Gaussian Elimination.cpp	Gaussian Elimination
+dsa/22. Grundy.cpp	Grundy
 
 [Dynamic Programming]
 dynamic-programming/1. LCS.cpp	LCS
@@ -48,15 +58,17 @@ graph/11. SCC.cpp	SCC
 graph/12. 0-1 BFS.cpp	0-1 BFS
 graph/13. Hull.cpp	Hull
 graph/14. Dynamic Hull.cpp	Dynamic Hull
+graph/15. Count SImple Cycle.cpp	Count SImple Cycle
 
 [Misc]
 misc/1. Max Pos and Next Greater.cpp	Max Pos and Next Greater
 misc/2. Knight Move.cpp	Knight Move
 misc/3. MatrixExpo.cpp	MatrixExpo
+misc/4. Ternary Search.cpp	Ternary Search
 
 [Number Theory]
 number_theory/1. Leap_year.cpp	Leap_year
-number_theory/2. Print_calender.cpp	Print_calender
+number_theory/2. Two Line Intersection.cpp	Two Line Intersection
 number_theory/3. Binary_exponentiation.cpp	Binary_exponentiation
 number_theory/4. Count_divisor.cpp	Count_divisor
 number_theory/5. Check_prime.cpp	Check_prime
