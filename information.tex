@@ -19,3 +19,18 @@
     $10^{12}$ & $936,966,912,400$ & 10,752 \\
     \hline
 \end{tabular}
+
+\bigskip
+
+\noindent
+$\gcd(a,b)=g$ implies there exist integers $x,y$ such that $ax+by=g$.
+
+\begin{itemize}
+    \item All integers of the form $ax+by$ are exactly the multiples of $g$.
+    \item Adding or subtracting multiples doesn’t change the gcd: $a\equiv b\pmod g \iff g\mid(a-b)$.
+    \item If $\gcd(a,b)=1$ then any integer can be formed; if $\gcd(a,b)=g$ then any multiple of $g$ can be formed.
+    \item $\gcd(a,b)=\gcd(a-b,b)=\gcd(a,b-a)$.
+    \item If $\gcd(a,b)=g$ then $\gcd\bigl(\tfrac{a}{g},\tfrac{b}{g}\bigr)=1$.
+    \item $\gcd(ka,kb)=k\gcd(a,b)$.
+    \item If $\gcd(a,m)=1$, Bézout gives $ax+my=1$, hence $ax\equiv1\pmod m$, so $x$ is the modular inverse of $a\bmod m$ (important when modulus is needed and $m$ is not prime).
+\end{itemize}
