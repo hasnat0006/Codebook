@@ -1,28 +1,26 @@
 // sum over subsets
-  for (int i = 0; i < B; i++) {
-    for (int mask = 0; mask < (1 << B); mask++) {
-      if ((mask & (1 << i)) != 0) {
-        f[mask] += f[mask ^ (1 << i)];
-      }
+for (int i = 0; i < B; i++) {
+  for (int mask = 0; mask < (1 << B); mask++) {
+    if ((mask & (1 << i)) != 0) {
+      f[mask] += f[mask ^ (1 << i)];
     }
   }
+}
 
-  // sum over supersets
-  for (int i = 0; i < B; i++) {
-    for (int mask = (1 << B) - 1 ; mask >= 0 ; mask--) {
-      if ((mask & (1 << i)) == 0) g[mask] += g[mask ^ (1 << i)] ;
-    }
+// sum over supersets
+for (int i = 0; i < B; i++) {
+  for (int mask = (1 << B) - 1; mask >= 0; mask--) {
+    if ((mask & (1 << i)) == 0)
+      g[mask] += g[mask ^ (1 << i)];
   }
-//submask
-for (int mask = 1; mask < (1 << 5); mask++)
-    {
-        for (int submask = mask; submask > 0; submask = ((submask - 1) & mask))
-        {
-            int subset = mask ^ submask;
-
-        }
-    }
-    /**
+}
+// submask
+for (int mask = 1; mask < (1 << 5); mask++) {
+  for (int submask = mask; submask > 0; submask = ((submask - 1) & mask)) {
+    int subset = mask ^ submask;
+  }
+}
+/**
     * we have to use SOS dp te idea is that we can iterate over all mask and using there subset get the actual value
     * the first is we have to find for each value in the array how many y we have so that x|y = x
     * if a binary is 1010 all possible y is 1000 0010 0000
@@ -57,4 +55,4 @@ for (int mask = 1; mask < (1 << 5); mask++)
     * we iterate over all x
     * the we iterate from 0 bit change to max bit change  and store in dp
     * TC of sos dp is (b*2^b);
-   
+**/

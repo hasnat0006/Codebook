@@ -18,45 +18,16 @@ const ll inf = 1e18;
 using u64 = uint64_t;
 using u128 = __uint128_t;
 
-ll binaryExp(ll base, ll power, ll MOD = mod) {
-  ll res = 1;
-  while (power) {
-    if (power & 1)
-      res = (res * base) % MOD;
-    base = ((base % MOD) * (base % MOD)) % MOD;
-    power /= 2;
+ll MSLCM(ll n) {
+	ll l = 1, r, val, ret = 0;
+	while (l <= n) {
+		val = n / l,r = n / val;
+		ret += val * ((l+r)*(r-l+1)/2);
+		l = r+1;
   }
-  return res;
+	return ret-1;
 }
 
-bool check_composite(ll n, ll a, ll d, ll s) {
-  ll x = binaryExp(a, d, n);
-  if (x == 1 || x == n - 1)
-    return false;
-  for (ll r = 1; r < s; r++) {
-    x = (u128)x * x % n;
-    if (x == n - 1)
-      return false;
-  }
-  return true;
-};
-bool MillerRabin(ll n, ll iter = 5) {
-  // returns true if n is probably prime, else returns false.
-  if (n < 4)
-    return n == 2 || n == 3;
-  ll s = 0;
-  ll d = n - 1;
-  while ((d & 1) == 0) {
-    d >>= 1;
-    s++;
-  }
-  for (ll i = 0; i < iter; i++) {
-    ll a = 2 + rand() % (n - 3);
-    if (check_composite(n, a, d, s))
-      return false;
-  }
-  return true;
-}
 
 void solve() {}
 
