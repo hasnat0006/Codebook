@@ -11,7 +11,9 @@ typedef pair<ll, ll> pl;
 typedef vector<ll> vl;
 typedef complex<ll> pt;
 
-#define G(x) ll x; cin >> x;
+#define G(x)                                                                   \
+  ll x;                                                                        \
+  cin >> x;
 #define F(i, l, r) for (ll i = l; i < (r); ++i)
 #define A(a) (a).begin(), (a).end()
 #define CRS(a, b) (conj(a) * (b)).Y
@@ -32,15 +34,14 @@ bool in_hull(pt p, vector<pt> &hu, vector<pt> &hd) {
     return false;
   auto u = upper_bound(A(hu), p);
   auto d = lower_bound(hd.rbegin(), hd.rend(), p);
-  return CRS(*u - p, *(u - 1) - p) > 0 &&
-         CRS(*(d - 1) - p, *d - p) >
-             0; // change to >= if border counts as "inside"
+  return CRS(*u - p, *(u - 1) - p) > 0 && CRS(*(d - 1) - p, *d - p) > 0;
+  // change to >= if border counts as "inside"
 }
 
 void do_hull(vector<pt> &pts, vector<pt> &h) {
   for (pt p : pts) {
-    while (h.size() > 1 && CRS(h.back() - p, h[h.size() - 2] - p) <=
-                               0) // change to < 0 if border points included
+    while (h.size() > 1 && CRS(h.back() - p, h[h.size() - 2] - p) <= 0)
+      // change to < 0 if border points included
       h.pop_back();
     h.push_back(p);
   }

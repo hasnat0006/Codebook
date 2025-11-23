@@ -59,18 +59,15 @@ graph/12. 0-1 BFS.cpp	0-1 BFS
 graph/13. Hull.cpp	Hull
 graph/14. Dynamic Hull.cpp	Dynamic Hull
 graph/15. Count SImple Cycle.cpp	Count SImple Cycle
-graph/15. Count SImple Cycle.cpp	Count SImple Cycle
 
 [Misc]
 misc/1. Max Pos and Next Greater.cpp	Max Pos and Next Greater
 misc/2. Knight Move.cpp	Knight Move
 misc/3. MatrixExpo.cpp	MatrixExpo
 misc/4. Ternary Search.cpp	Ternary Search
-misc/4. Ternary Search.cpp	Ternary Search
 
 [Number Theory]
 number_theory/1. Leap_year.cpp	Leap_year
-number_theory/2. Two Line Intersection.cpp	Two Line Intersection
 number_theory/2. Two Line Intersection.cpp	Two Line Intersection
 number_theory/3. Binary_exponentiation.cpp	Binary_exponentiation
 number_theory/4. Count_divisor.cpp	Count_divisor

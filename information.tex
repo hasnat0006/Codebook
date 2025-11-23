@@ -1,6 +1,7 @@
-\begin{tabular}{|p{2cm}|p{3.5cm}|p{2cm}|}
+\subsection{Numbers with Most Divisors}
+\begin{tabular}{|p{1.5cm}|p{3cm}|p{2cm}|}
     \hline
-    \textbf{Maximum Value ($N$)} & \textbf{Number with Most Divisors ($n$)} & \textbf{Number of Divisors ($\tau(n)$)} \\
+    \textbf{Max Value ($N$)} & \textbf{Number with Most Divisors ($n$)} & \textbf{Number of Divisors ($\tau(n)$)} \\
     \hline
     $10^3$ & 83,160 & 128 \\
     \hline
@@ -20,17 +21,95 @@
     \hline
 \end{tabular}
 
-\bigskip
 
+\subsection{Bézout's Identity and GCD Properties}
 \noindent
 $\gcd(a,b)=g$ implies there exist integers $x,y$ such that $ax+by=g$.
 
-\begin{itemize}
+\begin{itemize}[itemsep=0pt]
     \item All integers of the form $ax+by$ are exactly the multiples of $g$.
-    \item Adding or subtracting multiples doesn’t change the gcd: $a\equiv b\pmod g \iff g\mid(a-b)$.
+    \item Adding or subtracting multiples doesn't change the gcd: $a\equiv b\pmod g \iff g\mid(a-b)$.
     \item If $\gcd(a,b)=1$ then any integer can be formed; if $\gcd(a,b)=g$ then any multiple of $g$ can be formed.
     \item $\gcd(a,b)=\gcd(a-b,b)=\gcd(a,b-a)$.
     \item If $\gcd(a,b)=g$ then $\gcd\bigl(\tfrac{a}{g},\tfrac{b}{g}\bigr)=1$.
     \item $\gcd(ka,kb)=k\gcd(a,b)$.
     \item If $\gcd(a,m)=1$, Bézout gives $ax+my=1$, hence $ax\equiv1\pmod m$, so $x$ is the modular inverse of $a\bmod m$ (important when modulus is needed and $m$ is not prime).
 \end{itemize}
+
+
+\subsection{Combinatorics Information}
+
+\noindent\textbf{Total of all subarray sums:}
+Every element appears in many subarrays. If you're at index $i$, there are $(i+1)$ choices for where the subarray starts and $(n-i)$ choices for where it ends. Multiply these and you know how many subarrays include this element. That's why its total contribution is $a[i] \times (i+1) \times (n-i)$.
+
+\medskip
+\noindent\textbf{Total of all subsequence sums:}
+For an array $a$ of length $n$, each subsequence makes an independent ``take or skip'' choice for every element. There are $2^n$ total subsequences. For any element $a_i$, exactly $2^{\,n-1}$ of these subsequences include it. Therefore, its total contribution to the sum of all subsequence sums is $a_i \times 2^{\,n-1}$.
+
+\medskip
+\noindent\textbf{Sum of maximum values over all subarrays:}
+To find how much each element contributes to the total, consider an element $a_i$. It becomes the maximum of a subarray only if all elements in that subarray are smaller than $a_i$. Let $L$ be the number of consecutive elements to the left of $i$ (including none) you can take before encountering an element bigger than $a_i$. Let $R$ be the corresponding number to the right. Then $a_i$ is the maximum in exactly $L \times R$ subarrays. Its total contribution is therefore $a_i \times L \times R$. A monotonic stack is used to efficiently find these left and right boundaries for all indices.
+
+\medskip
+\noindent\textbf{Distinct-element counts over all subarrays:}
+To count the number of distinct elements across all subarrays, consider every ending index $i$. By tracking the last occurrence of each value, we can determine how far left we can extend while keeping all elements distinct. This gives the maximum valid window $[L_i, i]$. The number of subarrays ending at $i$ that have all distinct elements is simply the window size $(i - L_i + 1)$. Summing these values for all $i$ yields the total distinct-element count over all subarrays.
+
+\medskip
+\noindent\textbf{Bitwise OR over all subarrays:}
+For subarrays ending at index $i$, the bitwise OR value can only increase as the subarray grows, since once a bit becomes $1$, it never returns to $0$. Let $S_{i-1}$ be the set of OR values of all subarrays ending at $i-1$. To compute the OR values for subarrays ending at $i$, take each value in $S_{i-1}$, OR it with $a_i$, and also include the single element OR value $a_i$. After merging duplicates, the resulting set contains all OR values achieved by subarrays ending at $i$. Summing all these values over every $i$ yields the total bitwise OR over all subarrays.
+
+\medskip
+\noindent\textbf{Bitwise XOR over all subarrays:}
+Let $\text{pref}[i]$ be the prefix XOR up to index $i$. The XOR of a subarray $[l, r]$ is $\text{pref}[r] \oplus \text{pref}[l-1]$. Consider a single bit position. This bit is $1$ in the subarray XOR exactly when the two prefixes differ at that bit. Count how many prefixes have bit $0$ and how many have bit $1$. The number of contributing pairs is their product. Summing this contribution over all bits gives the total XOR value of all subarrays.
+
+\medskip
+\noindent\textbf{XOR of all pairs:}
+For any bit position, the XOR of two values is $1$ at that bit if and only if one value has the bit set and the other does not. If $c_1$ numbers have the bit $1$ and $c_0$ have the bit $0$, then the number of pairs contributing a $1$ at that bit is $c_0 \cdot c_1$. Summing these contributions over all bit positions yields the XOR of all unordered pairs.
+
+\medskip
+\noindent\textbf{XOR of OR of every subarray:}
+A bit in the OR of a subarray is $1$ if the subarray contains at least one element with that bit set. If a bit appears in $k$ positions, count how many subarrays include at least one such position. If this number is odd, the bit remains in the final XOR; otherwise it cancels out.
+
+\medskip
+\noindent\textbf{Tree: total length of all simple paths:}
+Removing an edge splits the tree into parts of sizes $s$ and $n-s$. Any path connecting one node from each part must use this edge, giving $s(n-s)$ such paths. Multiplying by the edge weight and summing over all edges yields the total path length.
+
+\medskip
+\noindent\textbf{Tree: distinct elements over all simple paths:}
+Using DSU-on-tree, maintain the largest child's data structure for each subtree and merge smaller children into it. This efficiently tracks all distinct values appearing along all paths.
+
+\medskip
+\noindent\textbf{Minimum Hamming distance over all cyclic shifts:}
+The Hamming distance for each shift equals the number of mismatched positions. Map equal characters to $+1$ and unequal characters to $-1$, then use convolution to compute match counts for all shifts simultaneously. More matches imply a smaller Hamming distance.
+
+\medskip
+\noindent\textbf{Total Hamming distance over all pairs:}
+For each bit, if $c$ values have that bit set and $n-c$ do not, then $c(n-c)$ pairs differ at that bit. Summing over all bits yields the total Hamming distance.
+
+\medskip
+\noindent\textbf{Sum of products over all subsequences:}
+Expanding the product $(1 + a_1)(1 + a_2)\cdots(1 + a_n)$ selects either $1$ or $a_i$ from each term, corresponding exactly to skipping or including $a_i$. Every subsequence product appears once; subtracting $1$ removes the empty subsequence.
+
+\medskip
+\noindent\textbf{Widths over all subsequences:}
+After sorting, element $a_i$ is maximum in $2^{i}$ subsequences and minimum in $2^{n-i-1}$ subsequences. Summing the contributions of all elements gives the total width.
+
+\medskip
+\noindent\textbf{Optimal weighted sum with range increments:}
+A difference array counts how many range operations affect each position. Sorting both the array values and their frequencies and pairing largest with largest maximizes the total sum.
+
+\medskip
+\noindent\textbf{Sum of divisors for $1$ to $N$:}
+Each integer $i$ is a divisor of all multiples $i, 2i, 3i, \ldots$. Adding $i$ to the divisor sum of each of these values for all $i$ from $1$ to $N$ computes all divisor sums.
+
+\medskip
+\noindent\textbf{Sum of absolute differences over all pairs:}
+After sorting, each $a_i$ contributes to the absolute difference with all smaller elements on its left and all larger elements on its right. Prefix sums compute these contributions efficiently.
+
+\medskip
+\noindent\textbf{Sum of inversion counts over all permutations:}
+Each pair $(i,j)$ with $i<j$ has a $1/2$ probability of appearing as an inversion in a random permutation. With $\frac{n(n-1)}{2}$ such pairs, the expected number of inversions is $\frac{n(n-1)}{4}$. Multiplying by $n!$ gives the total inversion sum.
+
+\medskip
+\noindent\textbf{Inversion sum over binary strings with $x$ zeros and $y$ ones:}
+There are $xy$ zero-one pairs, and each such pair contributes an inversion in exactly half the binary strings of length $x+y$ containing $x$ zeros and $y$ ones. Multiplying by the total count $\binom{x+y}{x}$ yields the inversion sum.

@@ -6,8 +6,7 @@ public:
     v.resize(n + 5);
     seg.resize(4 * n + 5);
   }
-  //! initially: ti = 1, low = 1, high = n
-  //(number of elements in the array);
+  //! initially: ti = 1, low = 1, high = n (number of elements in the array);
   void build(ll ti, ll low, ll high) {
     if (low == high) {
       seg[ti] = v[low];
@@ -18,9 +17,7 @@ public:
     build(2 * ti + 1, mid + 1, high);
     seg[ti] = (seg[2 * ti] + seg[2 * ti + 1]);
   }
-  //! initially: ti = 1, low = 1, high = n
-  //(number of elements in the array),
-  //(ql & qr)=user input in 1 based index;
+  //! initially: ti = 1, low = 1, high = n (number of elements in the array), (ql & qr)=user input in 1 based index;
   ll find(ll ti, ll tl, ll tr, ll ql, ll qr) {
     if (tl > qr || tr < ql) {
       return 0;
@@ -32,10 +29,7 @@ public:
     ll r = find(2 * ti + 1, mid + 1, tr, ql, qr);
     return (l + r);
   }
-  //! initially: ti = 1, tl = 1, tr = n
-  //(number of elements in the array),
-  // id = user input in 1 based indexing,
-  // val = updated value;
+  //! initially: ti = 1, tl = 1, tr = n (number of elements in the array), id = user input in 1 based indexing, val = updated value;
   void update(ll ti, ll tl, ll tr, ll id, ll val) {
     if (id > tr or id < tl)
       return;

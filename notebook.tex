@@ -10,6 +10,7 @@
 \usepackage{multicol}
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{graphicx}
+\usepackage{enumitem}
 
 \renewcommand*{\ttdefault}{pcr}
 \renewcommand\cftsecfont{\fontsize{10}{9}\bfseries}
@@ -65,9 +66,9 @@
 }
 \lstset{escapechar=@}
 
-\title{\vspace{-6ex}\Large{MIST\_Untitled}}
-\author{\vspace{-4ex}}
-\date{\vspace{-8ex}Last modified: \today}
+\title{\vspace{-6ex}\Large\textbf{MIST\_Untitled}}
+\author{\vspace{-4ex}\small Military Institute of Science and Technology}
+\date{\vspace{-6ex}\small\textit{Last modified: \today}}
 
 \begin{document}
 
@@ -87,14 +88,11 @@
 	\maketitle
 	\vspace{-6ex}
 	\tableofcontents
-
+    \newpage
 	\input contents.tex
+    \section {Information}
 	\input information.tex
 
-\end{multicols}
-\pagebreak
-\setlength{\columnseprule}{0pt}
-\begin{multicols}{2}
 	\section{Mathematics}
 	\input math.tex
 \end{multicols}

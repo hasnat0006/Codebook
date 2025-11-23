@@ -26,8 +26,7 @@ pair<T, T> CRT(T a1, T m1, T a2, T m2) {
   T m = m1 / g * m2;
   p = (p % m + m) % m;
   q = (q % m + m) % m;
-  return make_pair((p * a2 % m * (m1 / g) % m + q * a1 % m * (m2 / g) % m) % m,
-                   m);
+  return make_pair((p * a2 % m * (m1 / g) % m + q * a1 % m * (m2 / g) % m) % m,  m);
 }
 // intersecting AP of two APs: (a1 + d1x) and (a2 + d2x)
 pair<ll, ll> intersect(ll a1, ll d1, ll a2, ll d2) {
