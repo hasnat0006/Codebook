@@ -1,5 +1,5 @@
 \documentclass[8pt]{article}
-\usepackage[a4paper,margin=1.5cm]{geometry}
+\usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=1.2cm,right=1.2cm]{geometry}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
@@ -36,6 +36,7 @@
     basicstyle=\fontsize{10}{5}\ttfamily,
     aboveskip=0pt,
     belowskip=0pt,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
 }
 \lstdefinestyle{cpp}{
 	style=shared,
@@ -66,9 +67,13 @@
 }
 \lstset{escapechar=@}
 
-\title{\vspace{-6ex}\Large\textbf{MIST\_Untitled}}
-\author{\vspace{-4ex}\small Military Institute of Science and Technology}
-\date{\vspace{-6ex}\small\textit{Last modified: \today}}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{2pt plus 2pt minus 2pt}{1pt plus 1pt minus 1pt}
+\titlespacing*{\subsection}{0pt}{2pt plus 2pt minus 2pt}{1pt plus 1pt minus 1pt}
+
+\title{\vspace{-4ex}\Large\textbf{MIST\_Untitled}}
+\author{\vspace{-5ex}\small Yusuf Reza Hasnat $\mid$ Istiaque Ahmed Arik $\mid$ Shihab Ahmed  \\ \vspace{-11ex} \small Military Institute of Science and Technology}
+\date{\vspace{-1ex}\small\textit{Last modified: \today}}
 
 \begin{document}
 

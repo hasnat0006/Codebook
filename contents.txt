@@ -63,7 +63,7 @@ graph/15. Count SImple Cycle.cpp	Count SImple Cycle
 [Misc]
 misc/1. Max Pos and Next Greater.cpp	Max Pos and Next Greater
 misc/2. Knight Move.cpp	Knight Move
-misc/3. MatrixExpo.cpp	MatrixExpo
+misc/3. Matrix Exponentiation.cpp	Matrix Exponentiation
 misc/4. Ternary Search.cpp	Ternary Search
 
 [Number Theory]
@@ -90,5 +90,8 @@ number_theory/20. Millar_Rabin.cpp	Millar_Rabin
 number_theory/21. Modular_operation.cpp	Modular_operation
 number_theory/22. MSLCM.cpp	MSLCM
 number_theory/23. Find numbers in between [L, R] which are divisible by all Array elements.cpp	Find numbers in between [L, R] which are divisible by all Array elements
+number_theory/24. PollarRho.cpp	PollarRho
+number_theory/25. 2D Seg Tree.cpp	2D Seg Tree
+number_theory/26. Next Prev Smaller.cpp	Next Prev Smaller
 
 [Fin]

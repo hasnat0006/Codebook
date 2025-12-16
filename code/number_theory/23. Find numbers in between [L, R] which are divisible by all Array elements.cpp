@@ -7,6 +7,7 @@ void solve(ll *arr, ll N, ll L, ll R) {
     return;
   }
   ll k = (L / LCM) * LCM;
+  //
   if (k < L)
     k = k + LCM;
   for (ll i = k; i <= R; i = i + LCM)
