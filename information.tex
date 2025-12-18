@@ -21,20 +21,43 @@
     \hline
 \end{tabular}
 
+\subsection{Totient Function inside:} 
+\begin{itemize}
+    \item For a prime $p$: $\phi(p)=p-1$
 
-% \subsection{Bézout's Identity and GCD Properties}
-% \noindent
-% $\gcd(a,b)=g$ implies there exist integers $x,y$ such that $ax+by=g$.
+    \item For a prime power $p^e$: $\phi(p^e)=(p-1)p^{e-1}$
 
-% \begin{itemize}[itemsep=0pt]
-%     \item All integers of the form $ax+by$ are exactly the multiples of $g$.
-%     \item Adding or subtracting multiples doesn't change the gcd: $a\equiv b\pmod g \iff g\mid(a-b)$.
-%     \item If $\gcd(a,b)=1$ then any integer can be formed; if $\gcd(a,b)=g$ then any multiple of $g$ can be formed.
-%     \item $\gcd(a,b)=\gcd(a-b,b)=\gcd(a,b-a)$.
-%     \item If $\gcd(a,b)=g$ then $\gcd\bigl(\tfrac{a}{g},\tfrac{b}{g}\bigr)=1$.
-%     \item $\gcd(ka,kb)=k\gcd(a,b)$.
-%     \item If $\gcd(a,m)=1$, Bézout gives $ax+my=1$, hence $ax\equiv1\pmod m$, so $x$ is the modular inverse of $a\bmod m$ (important when modulus is needed and $m$ is not prime).
-% \end{itemize}
+    \item Divisor sum identity: $\sum_{d\mid n}\phi(d)=n$
+
+    \item Sum of integers coprime to $n$: \\
+    $f$(n)= $\sum_{\substack{1\le i\le n \\ \gcd(i,n)=1}} i
+    = \dfrac{\phi(n)\cdot n}{2}$
+
+    \item If GCD ($n$, $i$) =  $x$ then, 
+    $\phi\!\left(\dfrac{n}{x}\right)$ = $1$
+
+    \item Sum of GCD over all pairs $(i,j)$ with $1\le i,j\le n$:
+    $\sum_{i=1}^{n}\sum_{d\mid i} d\cdot\phi\!\left(\dfrac{i}{d}\right)$
+
+    \item Sum of LCM over all pairs $(i,j)$ with $1\le i,j\le n$:
+    $\sum_{i=1}^{n}\sum_{d\mid i} i\cdot f\!\left(\dfrac{i}{d}\right)$
+\end{itemize}
+
+
+
+\subsection{Bézout's Identity and GCD Properties}
+\noindent
+$\gcd(a,b)=g$ implies there exist integers $x,y$ such that $ax+by=g$.
+
+\begin{itemize}[itemsep=0pt]
+    \item All integers of the form $ax+by$ are exactly the multiples of $g$.
+    \item Adding or subtracting multiples doesn't change the gcd: $a\equiv b\pmod g \iff g\mid(a-b)$.
+    \item If $\gcd(a,b)=1$ then any integer can be formed; if $\gcd(a,b)=g$ then any multiple of $g$ can be formed.
+    \item $\gcd(a,b)=\gcd(a-b,b)=\gcd(a,b-a)$.
+    \item If $\gcd(a,b)=g$ then $\gcd\bigl(\tfrac{a}{g},\tfrac{b}{g}\bigr)=1$.
+    \item $\gcd(ka,kb)=k\gcd(a,b)$.
+    \item If $\gcd(a,m)=1$, Bézout gives $ax+my=1$, hence $ax\equiv1\pmod m$, so $x$ is the modular inverse of $a\bmod m$ (important when modulus is needed and $m$ is not prime).
+\end{itemize}
 
 
 \subsection{Combinatorics Information}

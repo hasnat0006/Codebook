@@ -71,7 +71,13 @@
 \titlespacing*{\section}{0pt}{2pt plus 2pt minus 2pt}{1pt plus 1pt minus 1pt}
 \titlespacing*{\subsection}{0pt}{2pt plus 2pt minus 2pt}{1pt plus 1pt minus 1pt}
 
-\title{\vspace{-4ex}\Large\textbf{MIST\_Untitled}}
+% Color formatting for sections and subsections
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{blue!70!black}}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{blue!70!black}}{\thesubsection}{1em}{}
+
+\title{\vspace{-4ex}\Large\textbf{\color{red!70!black}MIST\_Untitled}}
 \author{\vspace{-5ex}\small Yusuf Reza Hasnat $\mid$ Istiaque Ahmed Arik $\mid$ Shihab Ahmed  \\ \vspace{-11ex} \small Military Institute of Science and Technology}
 \date{\vspace{-1ex}\small\textit{Last modified: \today}}
 

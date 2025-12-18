@@ -20,3 +20,10 @@ vector<ll> computeGrundy(ll maxN, const vector<ll> &moves) {
   }
   return grundy;
 }
+/*
+1. Nim = all xor
+2. Misere Nim = Nim + corner case: if all piles are 1,reverse(nim)
+3. Bogus Nim = Nim
+4. Staircase Nim = Odd indexed pile Nim (Even indexed pile doesnt matter, as one player can give bogus moves to drop all even piles to ground)
+5. Sprague Grundy = Every impartial game under the normal play convention is equivalent to a one-heap game of nim
+*/
