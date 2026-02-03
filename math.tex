@@ -251,3 +251,19 @@ $\binom{n+k-1}{k-1}$ when $x_i \ge 0$.
 		= \tfrac{n^{2}}{\gcd(a,n)}$\\[1mm]
 	$\text{SUM}=\tfrac{n}{2}\left(\sum_{d\mid n}\varphi(d)d + 1\right)$
 }
+
+\subsection{Counting set bits in integers from 1 to n}
+
+\begin{verbatim}
+long long cntOnes(long long n) {
+	long long result = 0;
+	for (long long bit = 1; bit <= n; bit <<= 1) {
+		long long groups = (n + 1) / (bit * 2);
+		result += groups * bit;
+		long long extra = (n + 1) % (bit * 2);
+		if (extra > bit) result += extra - bit;
+	}
+	return result;
+}
+\end{verbatim}
+
